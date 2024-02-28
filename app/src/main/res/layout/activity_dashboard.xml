@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText"
+    android:background="@drawable/bg">
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/navigation_menu" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        tools:context=".DashboardActivity">
+
+        <ImageButton
+            android:id="@+id/hamburgerbutton"
+            android:layout_width="50dp"
+            android:layout_height="75dp"
+            android:background="@color/yellow"
+            android:clickable="true"
+            android:contentDescription="Hamburger button"
+            android:focusable="true"
+            android:src="@drawable/hamburger_button2" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_toEndOf="@id/hamburgerbutton"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="50sp"
+            android:textColor="@color/blue"
+            android:elegantTextHeight="true"
+            android:background="@color/yellow">
+        </TextView>
+    <RelativeLayout
+        android:id="@+id/maps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/options">
+        <FrameLayout
+            android:id="@+id/mapsselection"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/blue"
+            android:layout_marginBottom="25dp">
+            <ImageButton
+                android:id="@+id/mapicon"
+                android:layout_gravity="left"
+                android:layout_width="100dp"
+                android:layout_height="75dp"
+                android:src="@drawable/googlemaps"
+                android:contentDescription='Profile button"'
+                android:background="@color/blue"
+                android:scaleType="fitCenter">
+            </ImageButton>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="25dp"
+                android:clickable="false"
+                android:text="@string/mapsname"
+                android:textColor="@color/Gold"
+                android:textStyle="bold"
+                android:textSize="35dp"/>
+        </FrameLayout>
+    </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/dashboardcorners"
+            android:paddingBottom="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Select your Service Type"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+
+            <RadioGroup
+                android:id="@+id/groupradio"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="25dp">
+
+                <RadioButton
+                    android:id="@+id/searadio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corner"
+                    android:text="@string/option1"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/red"
+                    android:layout_marginBottom="10dp"/>
+
+                <RadioButton
+                    android:id="@+id/landradio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corner"
+                    android:text="@string/option2"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/Gold"
+                    android:layout_marginBottom="10dp" />
+
+                <RadioButton
+                    android:id="@+id/privateradio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corner"
+                    android:text="@string/option3"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/blue"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="OK"
+                    android:background="@drawable/rounded_corner2"
+                    android:backgroundTint="@color/Gold"/>
+            </RadioGroup>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_alignParentBottom="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:orientation="horizontal">
+                <FrameLayout
+                    android:id="@+id/informationframe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                    <ImageButton
+                        android:id="@+id/informationimg"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white"
+                        android:contentDescription="Information button"
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        android:src="@drawable/information"></ImageButton>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:clickable="false"
+                        android:text="About Us"
+                        android:textColor="@color/Gold"
+                        android:textStyle="bold" />
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/homeframe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                    <ImageButton
+                        android:id="@+id/homeimg"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white"
+                        android:contentDescription="Home button"
+
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        android:src="@drawable/home"></ImageButton>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:clickable="false"
+                        android:text="Home"
+                        android:textColor="@color/Gold"
+                        android:textStyle="bold" />
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/profileframe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+                    <ImageButton
+                        android:id="@+id/profileimg"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:src="@drawable/profile"
+                        android:contentDescription='Profile button"'
+                        android:background="@color/white"
+                        android:scaleX="2"
+                        android:scaleY="2">
+                    </ImageButton>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:clickable="false"
+                        android:text="Profile"
+                        android:textColor="@color/Gold"
+                        android:textStyle="bold" />
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/settingframe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="75dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                    <ImageButton
+                        android:id="@+id/settingimage"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white"
+                        android:contentDescription="Settings button"
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        android:src="@drawable/setting"></ImageButton>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:clickable="false"
+                        android:text="Settings"
+                        android:textColor="@color/Gold"
+                        android:textStyle="bold" />
+                </FrameLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

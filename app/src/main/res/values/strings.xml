@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LargaPH</string>
+    <string name="option1">LargaPH Sea\nSea Transportation</string>
+    <string name="option2">LargaPH Land\nLand Transportation</string>
+    <string name="option3">LargaPH Private\nPrivate Transportation</string>
+    <string name="mapsname">LargaPH Maps</string>
+</resources>
